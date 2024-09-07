@@ -1,0 +1,20 @@
+what is GraphQL
+GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. It allows clients to request only the data they need, making it more efficient than traditional REST APIs. With GraphQL, you define a schema that describes the types of data available and the relationships between them. Clients can then query this schema to retrieve or manipulate data in a flexible way.
+
+Explanation of GraphQL : 
+GraphQL is a powerful alternative to REST APIs that allows clients to request exactly the data they need. Here’s a clearer breakdown:
+->Schema Definition: In GraphQL, you define a schema that specifies the types of data available and their relationships. This schema acts as a contract between the client and server.
+->Single Endpoint: Unlike REST, which typically has multiple endpoints for different resources, GraphQL uses a single endpoint to handle all requests.
+->Flexible Queries: Clients can specify exactly what data they want in a single request, reducing over-fetching (getting more data than needed) and under-fetching (not getting enough data).
+
+Comparison with REST APIs
+=REST API:
+->Multiple endpoints (e.g., /users/1, /users/1/posts).
+->Fixed responses; clients may receive more data than needed.
+->Requires multiple requests to gather related data.
+=GraphQL:
+->Single endpoint (e.g., /graphql).
+->Clients specify the exact data structure they need.
+->Reduces the number of requests by fetching related data in one go.
+Summary
+GraphQL provides a more efficient and flexible way to interact with APIs compared to REST, allowing for tailored data retrieval and reducing the number of requests needed to gather related information.
