@@ -66,7 +66,7 @@ const userResolver = {
         try {
             await context.logout();
             req.session.destroy((err)=>{
-                if(err) throw
+                if(err) throw new Error("error occured while logging out")
 
             })
             res.clearCookie("cookie.sid")
