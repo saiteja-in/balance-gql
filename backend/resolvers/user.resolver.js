@@ -1,3 +1,4 @@
+import bcryptjs from "bcryptjs";
 import { users } from "../dummyData/data.js";
 import User from "../models/user.model.js";
 const userResolver = {
@@ -63,10 +64,15 @@ const userResolver = {
         }
     },
     logout:async(_,__,context)=>{
+        const {req,res}=context;
         try {
             await context.logout();
             req.session.destroy((err)=>{
-                if(err) throw new Error("error occured while logging out")
+                if(err){
+                    console.error("Error occured while loggin out")
+                    throw new Error("error occured while logging out")
+                }
+                    
 
             })
             res.clearCookie("cookie.sid")
