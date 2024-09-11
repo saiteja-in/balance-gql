@@ -1,0 +1,7 @@
+passport js setup
+connect-mongodb-session  stores mongodb session
+graphql-passport 
+passport
+
+
+

@@ -63,6 +63,8 @@ app.use(
   express.json(),
   expressMiddleware(server, {
     context: async ({req,res})=>buildContext({req,res}),
+    //context is an object that is shared across all the resolvers
+    //it is send as a 3rd argument in resolver (parent,{},context)
   }),
 );
 

@@ -7,9 +7,9 @@ import { HiPencilAlt } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const categoryColorMap = {
-	saving: "from-green-700 to-green-400",
-	expense: "from-pink-800 to-pink-600",
-	investment: "from-blue-700 to-blue-400",
+	saving: "from-emerald-500 to-lime-300",
+	expense: "from-fuchsia-700 to-magenta-500",
+	investment: "from-cyan-700 to-sky-400",
 	// Add more categories and corresponding color classes as needed
 };
 

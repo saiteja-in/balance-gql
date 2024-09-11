@@ -21,7 +21,7 @@ const TransactionForm = () => {
 			<div className='flex flex-wrap'>
 				<div className='w-full'>
 					<label
-						className='block uppercase tracking-wide text-white text-xs font-bold mb-2'
+						className='block uppercase tracking-wide text-white text-s font-bold mb-2'
 						htmlFor='description'
 					>
 						Transaction
@@ -32,7 +32,7 @@ const TransactionForm = () => {
 						name='description'
 						type='text'
 						required
-						placeholder='Rent, Groceries, Salary, etc.'
+						placeholder='Salary, Rent, Vacation etc..'
 					/>
 				</div>
 			</div>
@@ -40,7 +40,7 @@ const TransactionForm = () => {
 			<div className='flex flex-wrap gap-3'>
 				<div className='w-full flex-1 mb-6 md:mb-0'>
 					<label
-						className='block uppercase tracking-wide text-white text-xs font-bold mb-2'
+						className='block uppercase tracking-wide text-white text-s font-bold mb-2'
 						htmlFor='paymentType'
 					>
 						Payment Type
@@ -69,7 +69,7 @@ const TransactionForm = () => {
 				{/* CATEGORY */}
 				<div className='w-full flex-1 mb-6 md:mb-0'>
 					<label
-						className='block uppercase tracking-wide text-white text-xs font-bold mb-2'
+						className='block uppercase tracking-wide text-white text-s font-bold mb-2'
 						htmlFor='category'
 					>
 						Category
@@ -98,15 +98,15 @@ const TransactionForm = () => {
 
 				{/* AMOUNT */}
 				<div className='w-full flex-1 mb-6 md:mb-0'>
-					<label className='block uppercase text-white text-xs font-bold mb-2' htmlFor='amount'>
-						Amount($)
+					<label className='block uppercase text-white text-s font-bold mb-2' htmlFor='amount'>
+						Amount(₹)
 					</label>
 					<input
 						className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
 						id='amount'
 						name='amount'
 						type='number'
-						placeholder='150'
+						placeholder='250'
 					/>
 				</div>
 			</div>
@@ -115,7 +115,7 @@ const TransactionForm = () => {
 			<div className='flex flex-wrap gap-3'>
 				<div className='w-full flex-1 mb-6 md:mb-0'>
 					<label
-						className='block uppercase tracking-wide text-white text-xs font-bold mb-2'
+						className='block uppercase tracking-wide text-white text-s font-bold mb-2'
 						htmlFor='location'
 					>
 						Location
@@ -125,13 +125,13 @@ const TransactionForm = () => {
 						id='location'
 						name='location'
 						type='text'
-						placeholder='New York'
+						placeholder='Hyderabad'
 					/>
 				</div>
 
 				{/* DATE */}
 				<div className='w-full flex-1'>
-					<label className='block uppercase tracking-wide text-white text-xs font-bold mb-2' htmlFor='date'>
+					<label className='block uppercase tracking-wide text-white text-s font-bold mb-2' htmlFor='date'>
 						Date
 					</label>
 					<input

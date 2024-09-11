@@ -25,7 +25,7 @@ const TransactionPage = () => {
 	// if (loading) return <TransactionFormSkeleton />;
 
 	return (
-		<div className='h-screen max-w-4xl mx-auto flex flex-col items-center'>
+		<div className='h-screen max-w-4xl pt-9 mx-auto flex flex-col items-center'>
 			<p className='md:text-4xl text-2xl lg:text-4xl font-bold text-center relative z-50 mb-4 mr-4 bg-gradient-to-r from-pink-600 via-indigo-500 to-pink-400 inline-block text-transparent bg-clip-text'>
 				Update this transaction
 			</p>

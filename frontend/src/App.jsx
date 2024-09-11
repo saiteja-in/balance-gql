@@ -1,6 +1,6 @@
 import React from "react";
 import SignUp from "./pages/SignUp";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./pages/Header";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -12,15 +12,15 @@ import {Toaster} from "react-hot-toast"
 const App = () => {
   const {loading,data,error}=useQuery(GET_AUTHENTICATED_USER)
   console.log(data)
-  const authUser = true;
+  if(loading) return null;
   return (
     <>
-    {/* {authUser && <Header />} */}
+    {data?.authUser && <Header />}
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUp/>}/>
-        <Route path="/transaction/:id" element={<TransactionPage/>}/> 
+        <Route path="/" element={data?.authUser ? <HomePage /> : <Navigate to="/login" />} />
+        <Route path="/login" element={!data?.authUser ? <LoginPage />: <Navigate to="/" />} />
+        <Route path="/signup" element={!data?.authUser ? <SignUp/>: <Navigate to="/" />}/>
+        <Route path="/transaction/:id" element={data?.authUser ? <TransactionPage/>:<Navigate to="/login" />}/> 
         {/* <Route path="/*" element={<NotFound/>}/> */}
       </Routes>
       <Toaster />

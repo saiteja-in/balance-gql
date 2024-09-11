@@ -1,5 +1,5 @@
 import passport from "passport";
-import bcryptjs from "bcryptjs";
+import bcrypt from "bcryptjs";
 import User from "../models/user.model.js";
 import { GraphQLLocalStrategy } from "graphql-passport";
 
@@ -8,6 +8,7 @@ export const configurePassport = async()=>{
         console.log("Serializing user");
         done(null,user.id)
     });
+    //is used to decide what data of the user should be stored in the session
     passport.deserializeUser(async(id,done)=>{
         console.log("Deserializing user");
         try {
@@ -17,6 +18,8 @@ export const configurePassport = async()=>{
             done(error)
         }
     })
+    //This function is called on every request to retrieve user details from the session using the user ID stored during serialization.
+    //It takes the id stored in the session, queries the database to find the corresponding user, and passes the user object to the next function (via done).
     passport.use(
         new GraphQLLocalStrategy(async(username,password,done)=>{
             try {
