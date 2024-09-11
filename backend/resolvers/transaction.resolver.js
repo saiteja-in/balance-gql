@@ -5,8 +5,9 @@ const transactionResolver = {
   Query: {
     transactions: async(_,__,context) => {
       try {
-        if(!context.getuser())throw new Error("Unauthorised")
-        const userId=await Transaction.find({userId});
+        if(!context.getUser())throw new Error("Unauthorised")
+          const userId=await context.getUser()._id;
+        const transactions=await Transaction.find({userId});
         return transactions;
       } catch (error) {
         console.error("Error getting transactions:",error)
