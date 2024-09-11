@@ -6,7 +6,8 @@ import TransactionForm from "../components/TransactionForm";
 
 import { MdLogout } from "react-icons/md";
 import { LOGOUT } from "../graphql/mutations/user.mutation";
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
+import { GET_TRANSACTION_STATISTICS } from "../graphql/queries/transaction.query";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -29,6 +30,9 @@ const HomePage = () => {
 	const [logout,{loading,client}]=useMutation(LOGOUT,{
 		refetchQueries:["GetAuthenticatedUser"]
 	})
+	const {data}=useQuery(GET_TRANSACTION_STATISTICS);
+	console.log("transaction statistics",data)
+
 	const handleLogout =async () => {
 		try {
 			await logout()
