@@ -17,7 +17,7 @@ const HomePage = () => {
 		datasets: [
 			{
 				label: "%",
-				data: [13, 8, 3],
+				data: [0, 0, 0],
 				backgroundColor: ["rgba(75, 192, 192)", "rgba(255, 99, 132)", "rgba(54, 162, 235)"],
 				borderColor: ["rgba(75, 192, 192)", "rgba(255, 99, 132)", "rgba(54, 162, 235, 1)"],
 				borderWidth: 1,
