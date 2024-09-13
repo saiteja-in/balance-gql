@@ -1,5 +1,4 @@
 import bcrypt from "bcryptjs";
-import { users } from "../dummyData/data.js";
 import User from "../models/user.model.js";
 const userResolver = {
   Query: {

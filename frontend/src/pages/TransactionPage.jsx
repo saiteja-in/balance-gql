@@ -7,7 +7,7 @@ import { UPDATE_TRANSACTION } from "../graphql/mutations/transaction.mutation";
 const TransactionPage = () => {
   const { id } = useParams();
   const [updateTransaction,{loading:updateloading}]=useMutation(UPDATE_TRANSACTION,{
-	refetchQueries:["GetTransaction"]
+	refetchQueries:["GetTransaction","GetTransactionStatistics"]
   })
   const { loading, data } = useQuery(GET_TRANSACTION, {
     variables: { id: id },

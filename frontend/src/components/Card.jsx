@@ -25,7 +25,7 @@ const Card = ({ transaction }) => {
 	console.log(category)
 	const formattedDate=formatDate(date)
 	const [deleteTransaction,{loading}]=  useMutation(DELETE_TRANSACTION,{
-		refetchQueries:["GetTransactions"]
+		refetchQueries:["GetTransactions","GetTransactionStatistics"]
 	})
 	const cardClass = categoryColorMap[category];
 	const handleDelete=async()=>{

@@ -6,7 +6,6 @@ import passport from 'passport'
 import session from "express-session"
 import connectMongo from "connect-mongodb-session"
 import { ApolloServer } from "@apollo/server"
-import { startStandaloneServer } from "@apollo/server/standalone"
 import mergedResolvers from "./resolvers/index.js"
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
