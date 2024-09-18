@@ -7,7 +7,7 @@ import Background from "./components/background.jsx";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri:import.meta.env.VITE_NODE_ENV === "production" ? "http://localhost:4000/graphql":"/graphql",
   cache: new InMemoryCache(),
   credentials: "include",
 });
